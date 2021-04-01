@@ -1,5 +1,4 @@
-  
-  
+
 sudo: required
 language: python
 services:
@@ -20,10 +19,8 @@ deploy:
   region: "us-east-2"
   app: "dtest"
   env: "Dtest-env"
-  bucket_name: "elasticbeanstalk:us-east-2:331194181497"
-  bucket_path: "dtest"
+  bucket_name: "elasticbeanstalk:us-east-2"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
+  secret_access_key: $AWS_SECRET_KEY
