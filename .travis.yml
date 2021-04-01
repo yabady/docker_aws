@@ -14,3 +14,16 @@ after_success:
   #take built images and push to DOcker hub
   - docker push yariski/dockertest
   #test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "dtest"
+  env: "Dtest-env"
+  bucket_name: "elasticbeanstalk:us-east-2:331194181497"
+  bucket_path: "dtest"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
