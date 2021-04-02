@@ -15,7 +15,7 @@ after_success:
   #test
 
 deploy:
-  skip_cleanup: true
+  cleanup: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "dtest"
