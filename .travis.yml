@@ -15,12 +15,11 @@ after_success:
   #test
 
 deploy:
-  cleanup: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "dtest"
   env: "Dtest-env"
-  bucket_name: "elasticbeanstalk:us-east-2"
+  bucket_name: "elasticbeanstalk:us-east-2:331194181497"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
