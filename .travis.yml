@@ -19,6 +19,7 @@ deploy:
   region: "us-east-2"
   app: "dtest"
   env: "Dtest-env"
+  edge: true
   bucket_name: "elasticbeanstalk:us-east-2"
   on:
     branch: master
